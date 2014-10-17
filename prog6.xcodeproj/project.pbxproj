@@ -19,9 +19,11 @@
 		8411DF3619EE612900695E96 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8411DF3419EE612900695E96 /* MainStoryboard.storyboard */; };
 		8411DF4119EE629500695E96 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411DF4019EE629500695E96 /* TableViewController.m */; };
 		8411DF4419EE688900695E96 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411DF4319EE688900695E96 /* TableCell.m */; };
+		981A2966396550333FEE0557 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD579B937B14D4CB2044CF66 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C9BAE305ADCA9F6A795BA6E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8411DF1919EE612900695E96 /* prog6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prog6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8411DF1C19EE612900695E96 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8411DF1E19EE612900695E96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,6 +42,8 @@
 		8411DF4019EE629500695E96 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		8411DF4219EE688600695E96 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
 		8411DF4319EE688900695E96 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		85BB204B7A3D5199BAE5FD68 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AD579B937B14D4CB2044CF66 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 				8411DF1D19EE612900695E96 /* UIKit.framework in Frameworks */,
 				8411DF1F19EE612900695E96 /* Foundation.framework in Frameworks */,
 				8411DF2119EE612900695E96 /* CoreGraphics.framework in Frameworks */,
+				981A2966396550333FEE0557 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,7 @@
 				8411DF2219EE612900695E96 /* prog6 */,
 				8411DF1B19EE612900695E96 /* Frameworks */,
 				8411DF1A19EE612900695E96 /* Products */,
+				B3CA9A2C86A7197619319D5D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +85,7 @@
 				8411DF1C19EE612900695E96 /* UIKit.framework */,
 				8411DF1E19EE612900695E96 /* Foundation.framework */,
 				8411DF2019EE612900695E96 /* CoreGraphics.framework */,
+				AD579B937B14D4CB2044CF66 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,6 +119,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B3CA9A2C86A7197619319D5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85BB204B7A3D5199BAE5FD68 /* Pods.debug.xcconfig */,
+				4C9BAE305ADCA9F6A795BA6E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8411DF3C19EE612900695E96 /* Build configuration list for PBXNativeTarget "prog6" */;
 			buildPhases = (
+				6F20388D2C01B63A0C9EA382 /* Check Pods Manifest.lock */,
 				8411DF1519EE612900695E96 /* Sources */,
 				8411DF1619EE612900695E96 /* Frameworks */,
 				8411DF1719EE612900695E96 /* Resources */,
+				5DA4FC9F612403E920D244FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +190,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DA4FC9F612403E920D244FE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F20388D2C01B63A0C9EA382 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8411DF1519EE612900695E96 /* Sources */ = {
@@ -265,6 +316,7 @@
 		};
 		8411DF3D19EE612900695E96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85BB204B7A3D5199BAE5FD68 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "prog6/prog6-Prefix.pch";
@@ -276,6 +328,7 @@
 		};
 		8411DF3E19EE612900695E96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9BAE305ADCA9F6A795BA6E /* Pods.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "prog6/prog6-Prefix.pch";
@@ -304,6 +357,7 @@
 				8411DF3E19EE612900695E96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
