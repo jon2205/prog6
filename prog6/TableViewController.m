@@ -10,6 +10,7 @@
 #import "TableCell.h"
 #import "AFNetworking.h"
 
+
 @interface TableViewController ()
 
 @end
@@ -34,47 +35,62 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"https://api.dribbble.com/shots/popular?per_page=50" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+
+         NSLog(@"JSON: %@", responseObject);
+         NSLog(@"111111111111111111111111");
+         NSLog(@"JSON: %@", responseObject[@"shots"][0][@"title"]);
+         //for (int i=0;i<17;i++) {
+         //    self.Title[i]=[NSString stringWithFormat:@"%@", responseObject[@"shots"][i][@"title"]];
+         //}
+         NSLog(@"JSON: %@", responseObject[@"shots"][1][@"title"]);
+     }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         NSLog(@"Error: %@", error);
+     }];
     
-    _Title = @[@"111",
-               @"222",
-               @"333",
-               @"444",
-               @"555",
-               @"666",
-               @"777",
-               @"888",
-               @"999",
-               @"101",
-               @"102",
-               @"103",
-               @"104",
-               @"105",
-               @"106",
-               @"107",
-               @"108",];
+    self.Title = @[@"111",
+                   @"222",
+                   @"333",
+                   @"444",
+                   @"555",
+                   @"666",
+                   @"777",
+                   @"888",
+                   @"999",
+                   @"101",
+                   @"102",
+                   @"103",
+                   @"104",
+                   @"105",
+                   @"106",
+                   @"107",
+                   @"108"];
     
-    
-    _Images = @[@"Default@2x.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default@2x.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",
-                @"Default.png",];
+    self.Images = @[@"Default@2x.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default@2x.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png",
+                    @"Default.png"];
 
     
-    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -93,7 +109,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return _Title.count;
+    return self.Title.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -105,8 +121,8 @@
     
     int row = [indexPath row];
     
-    cell.TitleLabel.text = _Title[row];
-    cell.ThumpImage.image = [UIImage imageNamed:_Images[row]];
+    cell.TitleLabel.text = self.Title[row];
+    cell.ThumpImage.image = [UIImage imageNamed:self.Images[row]];
     
     return cell;
 }
