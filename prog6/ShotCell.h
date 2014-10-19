@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableCell : UITableViewCell
+@interface ShotCell : UITableViewCell
 
     @property (strong, nonatomic) IBOutlet UILabel *TitleLabel;
     @property (strong, nonatomic) IBOutlet UIImageView *ThumpImage;

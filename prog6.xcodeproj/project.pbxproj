@@ -18,7 +18,9 @@
 		8411DF3319EE612900695E96 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8411DF3219EE612900695E96 /* Default-568h@2x.png */; };
 		8411DF3619EE612900695E96 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8411DF3419EE612900695E96 /* MainStoryboard.storyboard */; };
 		8411DF4119EE629500695E96 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411DF4019EE629500695E96 /* TableViewController.m */; };
-		8411DF4419EE688900695E96 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411DF4319EE688900695E96 /* TableCell.m */; };
+		8411DF4419EE688900695E96 /* ShotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411DF4319EE688900695E96 /* ShotCell.m */; };
+		849F1F7519F24C2C00E0C97A /* ShotNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F1F7419F24C2C00E0C97A /* ShotNetworkManager.m */; };
+		849F1F7819F2FC2D00E0C97A /* NSShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F1F7719F2FC2C00E0C97A /* NSShot.m */; };
 		981A2966396550333FEE0557 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD579B937B14D4CB2044CF66 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -40,8 +42,12 @@
 		8411DF3519EE612900695E96 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8411DF3F19EE629500695E96 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		8411DF4019EE629500695E96 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		8411DF4219EE688600695E96 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
-		8411DF4319EE688900695E96 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		8411DF4219EE688600695E96 /* ShotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotCell.h; sourceTree = "<group>"; };
+		8411DF4319EE688900695E96 /* ShotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotCell.m; sourceTree = "<group>"; };
+		849F1F7319F24C2C00E0C97A /* ShotNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotNetworkManager.h; sourceTree = "<group>"; };
+		849F1F7419F24C2C00E0C97A /* ShotNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotNetworkManager.m; sourceTree = "<group>"; };
+		849F1F7619F2FC2B00E0C97A /* NSShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSShot.h; sourceTree = "<group>"; };
+		849F1F7719F2FC2C00E0C97A /* NSShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSShot.m; sourceTree = "<group>"; };
 		85BB204B7A3D5199BAE5FD68 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AD579B937B14D4CB2044CF66 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,13 +99,16 @@
 		8411DF2219EE612900695E96 /* prog6 */ = {
 			isa = PBXGroup;
 			children = (
+				849F1F7219F24BDD00E0C97A /* Network */,
 				8411DF2B19EE612900695E96 /* AppDelegate.h */,
 				8411DF2C19EE612900695E96 /* AppDelegate.m */,
 				8411DF3419EE612900695E96 /* MainStoryboard.storyboard */,
 				8411DF3F19EE629500695E96 /* TableViewController.h */,
 				8411DF4019EE629500695E96 /* TableViewController.m */,
-				8411DF4219EE688600695E96 /* TableCell.h */,
-				8411DF4319EE688900695E96 /* TableCell.m */,
+				8411DF4219EE688600695E96 /* ShotCell.h */,
+				8411DF4319EE688900695E96 /* ShotCell.m */,
+				849F1F7619F2FC2B00E0C97A /* NSShot.h */,
+				849F1F7719F2FC2C00E0C97A /* NSShot.m */,
 				8411DF2319EE612900695E96 /* Supporting Files */,
 			);
 			path = prog6;
@@ -117,6 +126,15 @@
 				8411DF3219EE612900695E96 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		849F1F7219F24BDD00E0C97A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				849F1F7319F24C2C00E0C97A /* ShotNetworkManager.h */,
+				849F1F7419F24C2C00E0C97A /* ShotNetworkManager.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		B3CA9A2C86A7197619319D5D /* Pods */ = {
@@ -232,7 +250,9 @@
 				8411DF2919EE612900695E96 /* main.m in Sources */,
 				8411DF2D19EE612900695E96 /* AppDelegate.m in Sources */,
 				8411DF4119EE629500695E96 /* TableViewController.m in Sources */,
-				8411DF4419EE688900695E96 /* TableCell.m in Sources */,
+				8411DF4419EE688900695E96 /* ShotCell.m in Sources */,
+				849F1F7519F24C2C00E0C97A /* ShotNetworkManager.m in Sources */,
+				849F1F7819F2FC2D00E0C97A /* NSShot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

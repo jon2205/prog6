@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Admin. All rights reserved.
 //
 
-#import "TableCell.h"
+#import "ShotCell.h"
 
-@implementation TableCell
+@implementation ShotCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
