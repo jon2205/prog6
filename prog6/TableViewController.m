@@ -15,7 +15,6 @@
 @interface TableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *shots;
-@property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) NSMutableArray *imageViewArray;
 
 @end
@@ -35,8 +34,7 @@
 {
     [super viewDidLoad];
     self.shots = [NSMutableArray new];
-    self.imageView = [UIImageView new];
-    self.imageViewArray = [[NSMutableArray arrayWithObject:self.imageView] init];
+    self.imageViewArray = [NSMutableArray new];
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -47,8 +45,9 @@
     [[ShotNetworkManager sharedManager] shotRequest:^(NSArray *shots) {
         for (NSDictionary *shotInfo in shots) {
             [self.shots addObject:shotInfo[@"title"]];
-            [self.imageView setImageWithURL:[NSURL URLWithString:shotInfo[@"image_teaser_url"]]];
-            [self.imageViewArray addObject:self.imageView];
+            //[self.imageView setImageWithURL:[NSURL URLWithString:shotInfo[@"image_teaser_url"]]];
+            //[self.imageViewArray addObject:shotInfo[@"image_teaser_url"]];
+            [self.imageViewArray addObject:shotInfo[@"image_teaser_url"]];
         }
         [self.tableView reloadData];
     } failure:^(NSString *errorMessage) {
@@ -115,7 +114,7 @@
     ShotCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.TitleLabel.text = self.shots[indexPath.row];
-    cell.ThumpImage.image = self.imageViewArray[indexPath.row];
+    [cell.ThumpImage setImageWithURL:[NSURL URLWithString:self.imageViewArray[indexPath.row]]];
     
     return cell;
 }
