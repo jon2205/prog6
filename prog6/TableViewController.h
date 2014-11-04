@@ -10,8 +10,4 @@
 
 @interface TableViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray * Images;
-@property (nonatomic, strong) NSArray * Title;
-
-
 @end
