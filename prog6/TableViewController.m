@@ -41,7 +41,6 @@
             shot.image = [[NSString alloc] init];
             shot.title = shotInfo[@"title"];
             shot.image = shotInfo[@"image_teaser_url"];
-            NSLog(@"%@", shot.title);
             [self.shotArray addObject: shot];
         }
         NSLog(@"%@", self.shotArray[0]);
