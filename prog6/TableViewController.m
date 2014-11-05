@@ -36,15 +36,11 @@
     self.shotArray = [[NSMutableArray alloc] init];
     [[ShotNetworkManager sharedManager] shotRequest:^(NSArray *shots) {
         for (NSDictionary *shotInfo in shots) {
-            NSShot *shot;
-            shot.title = [[NSString alloc] init];
-            shot.image = [[NSString alloc] init];
+            NSShot *shot=[[NSShot alloc] init];
             shot.title = shotInfo[@"title"];
             shot.image = shotInfo[@"image_teaser_url"];
             [self.shotArray addObject: shot];
         }
-        NSLog(@"%@", self.shotArray[0]);
-        NSLog(@"%@", self.shotArray[1]);
         [self.tableView reloadData];
     } failure:^(NSString *errorMessage) {
         NSLog(@"Error %@", errorMessage);
@@ -69,9 +65,7 @@
     static NSString *CellIdentifier = @"TableCell";
     ShotCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSShot *shot;
-    shot.title = [[NSString alloc] init];
-    shot.image = [[NSString alloc] init];
+    NSShot *shot=[[NSShot alloc] init];
     shot = self.shotArray[indexPath.row];
     cell.TitleLabel.text = shot.title;
     [cell.ThumpImage setImageWithURL:[NSURL URLWithString: shot.image]];
